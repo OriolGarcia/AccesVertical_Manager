@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A1F242F-BCAE-443A-8079-DFDB5FA8F56C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccesVertical_Manager</RootNamespace>
+    <AssemblyName>AccesVertical_Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AccesVerticalManagerIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbsènciesAnualsOperari.cs" />
+    <Compile Include="AbsènciesMensuals.cs" />
+    <Compile Include="AddTècnicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTècnicForm.Designer.cs">
+      <DependentUpon>AddTècnicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddVehicleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVehicleForm.Designer.cs">
+      <DependentUpon>AddVehicleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AfegirAbsenciaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AfegirAbsenciaForm.Designer.cs">
+      <DependentUpon>AfegirAbsenciaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaObraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaObraForm.Designer.cs">
+      <DependentUpon>AltaObraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaOperariForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaOperariForm.Designer.cs">
+      <DependentUpon>AltaOperariForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignarFormacioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignarFormacioForm.Designer.cs">
+      <DependentUpon>AssignarFormacioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignarFormacioObraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignarFormacioObraForm.Designer.cs">
+      <DependentUpon>AssignarFormacioObraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaixaOperariForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaixaOperariForm.Designer.cs">
+      <DependentUpon>BaixaOperariForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="ConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionForm.Designer.cs">
+      <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiesExtres.cs" />
+    <Compile Include="EditarPlanningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarPlanningForm.Designer.cs">
+      <DependentUpon>EditarPlanningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarPlanningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarPlanningForm.Designer.cs">
+      <DependentUpon>GenerarPlanningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MesdeObra.cs" />
+    <Compile Include="ModificarFormacioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarFormacioForm.Designer.cs">
+      <DependentUpon>ModificarFormacioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarObraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarObraForm.Designer.cs">
+      <DependentUpon>ModificarObraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarOperariForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarOperariForm.Designer.cs">
+      <DependentUpon>ModificarOperariForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarTècnicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarTècnicForm.Designer.cs">
+      <DependentUpon>ModificarTècnicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarVehicleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarVehicleForm.Designer.cs">
+      <DependentUpon>ModificarVehicleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovaFormació.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovaFormació.Designer.cs">
+      <DependentUpon>NovaFormació.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordChangeForm.Designer.cs">
+      <DependentUpon>PasswordChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectOperarisperDefecteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectOperarisperDefecteForm.Designer.cs">
+      <DependentUpon>SelectOperarisperDefecteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowNewPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowNewPassword.Designer.cs">
+      <DependentUpon>ShowNewPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPermissionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPermissionsForm.Designer.cs">
+      <DependentUpon>UserPermissionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="VehiclesBaixaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehiclesBaixaForm.Designer.cs">
+      <DependentUpon>VehiclesBaixaForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddTècnicForm.resx">
+      <DependentUpon>AddTècnicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddVehicleForm.resx">
+      <DependentUpon>AddVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AfegirAbsenciaForm.resx">
+      <DependentUpon>AfegirAbsenciaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaObraForm.resx">
+      <DependentUpon>AltaObraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaOperariForm.resx">
+      <DependentUpon>AltaOperariForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignarFormacioForm.resx">
+      <DependentUpon>AssignarFormacioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignarFormacioObraForm.resx">
+      <DependentUpon>AssignarFormacioObraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaixaOperariForm.resx">
+      <DependentUpon>BaixaOperariForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionForm.resx">
+      <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarPlanningForm.resx">
+      <DependentUpon>EditarPlanningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarPlanningForm.resx">
+      <DependentUpon>GenerarPlanningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarFormacioForm.resx">
+      <DependentUpon>ModificarFormacioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarObraForm.resx">
+      <DependentUpon>ModificarObraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarOperariForm.resx">
+      <DependentUpon>ModificarOperariForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarTècnicForm.resx">
+      <DependentUpon>ModificarTècnicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarVehicleForm.resx">
+      <DependentUpon>ModificarVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaFormació.resx">
+      <DependentUpon>NovaFormació.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordChangeForm.resx">
+      <DependentUpon>PasswordChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SelectOperarisperDefecteForm.resx">
+      <DependentUpon>SelectOperarisperDefecteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowNewPassword.resx">
+      <DependentUpon>ShowNewPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPermissionsForm.resx">
+      <DependentUpon>UserPermissionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehiclesBaixaForm.resx">
+      <DependentUpon>VehiclesBaixaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accesvertical.ico" />
+    <Content Include="AccesVerticalManagerIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
